@@ -9,8 +9,17 @@ class algo(object):
     def bubbleSort(self):
       pass  
     
-    def insertionSort(self):
-      pass
+    def insertionSort(self,myList):
+        i="Null"
+        key="Null"
+        for j in range(1,len(myList)):
+            key=myList[j]
+            i=j-1
+            while i>=0 and myList[i]>key:
+                myList[i+1]=myList[i]
+                i=i-1
+            myList[i+1]=key
+        return myList
     
     def selectionSort(self):
       pass
@@ -34,15 +43,19 @@ class algo(object):
 if __name__=="__main__":
     
     b = algo()
-    print("1. BUBBLE SORT \n2.INSERTION SORT \n3.SELECTION SORT \n4.MERGE SORT \n5.SHELL SHORT \n6.QUICK SORT \n7. HEAP SORT \n8.COUNT SORT \n9.EXIT\n")
-    a= int(input("Enter number for using algorithm you want to apply:- "))
-    
-    while a!=9:
+    flag=True
+        
+    while flag==True:
+        print("1. BUBBLE SORT \n2.INSERTION SORT \n3.SELECTION SORT \n4.MERGE SORT \n5.SHELL SHORT \n6.QUICK SORT \n7. HEAP SORT \n8.COUNT SORT \n9.EXIT\n")
+        a= int(input("Enter number for using algorithm you want to apply:- "))
+
         if a==1:
             b.bubbleSort()
             
         elif a==2:
-            b.insertionSort()
+            l=[int(x) for x in input().split(" ")]
+            print(b.insertionSort(l))
+            
             
         elif a==3:
             b.selectionSort()
