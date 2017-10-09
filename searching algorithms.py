@@ -9,8 +9,19 @@ class algo(object):
     def insertionSearch(self):
       pass  
     
-    def binarySearch(self):
-      pass
+    def binarySearch(self,no,myList):
+        self.found=False
+        self.bottom=0
+        self.top=len(myList)-1
+    
+        while self.bottom <= self.top and self.found==False:
+            self.middle=(self.bottom+self.top)//2
+            if no==myList[self.middle]:
+                return self.middle
+            elif self.middle<no:
+                self.bottom=self.middle+1
+            elif self.middle>no:
+                self.top=self.middle-1
     
     def interpolationSearch(self):
       pass
@@ -23,15 +34,25 @@ class algo(object):
 if __name__=="__main__":
     
     b = algo()
-    print("1. LINEAR SEARCH \n2.BINARY SEARCH \n3.INTERPOLATION SEARCH \n4.HASH TABLE \n5.EXIT\n")
-    a= int(input("Enter number for using algorithm you want to apply:- "))
+    flag=True
     
-    while a!=5:
+    
+    while flag==True:
+        print("1. LINEAR SEARCH \n2.BINARY SEARCH \n3.INTERPOLATION SEARCH \n4.HASH TABLE \n5.EXIT\n")
+        a= int(input("Enter number for using algorithm you want to apply:- "))
         if a==1:
             b.insertionSearch()
             
         elif a==2:
-            b.binarySearch()
+            
+            l=[3,5,8,56,66,85]
+            no=int(input("Enter number you want to search: "))
+            pos=b.binarySearch(no,l)
+            if pos:
+                print("Position of your item is %s"%pos)
+            else:
+                print("No such item found in your list")
+                    
             
         elif a==3:
             b.interpolationSearch()
