@@ -54,7 +54,42 @@ class linkedList:
     
      def doublyLinkedList(self):
       pass
+    """
+    class Node:
+  
+  def __init__(self,node_value):
+    self.node = node
+    self.next_node = None
+    self.previous_node =None
+
+class LinkedList:
+  
+  def __init__(self):
+    head = None
     
+  def Add_Node(self, node_value):
+    n = Node(node_value)
+    if self.head == None :	
+			self.head = node
+		else :
+			n.next_node = self.head
+			n.next_node.previous_node = node						
+			self.head = n	
+    
+  
+  def Remove_Node(self, node_value):
+    pass
+  
+  def Search_Node(self,node_value):
+    pass
+  
+  def View_All_Nodes(self):
+    pass
+  
+
+l= LinkedList()
+l.Add_Node(23)
+    """
 if __name__=="__main__":
     
     b = stack_queue_algo()
