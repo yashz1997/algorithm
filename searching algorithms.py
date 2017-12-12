@@ -4,6 +4,7 @@ Created on Mon Oct  9 17:25:36 2017
 
 @author: Yash.Zalavadia
 """
+################# ALGORITHMS #################
 class algo(object):
     
     
