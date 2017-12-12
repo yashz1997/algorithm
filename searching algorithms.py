@@ -4,7 +4,7 @@ Created on Mon Oct  9 17:25:36 2017
 
 @author: Yash.Zalavadia
 """
-################# ALGORITHMS #################
+
 class algo(object):
     
     
@@ -55,8 +55,8 @@ if __name__=="__main__":
         
         print("1.LINEAR SEARCH \n2.BINARY SEARCH \n3.INTERPOLATION SEARCH  \n4.EXIT\n")
         a= int(input("Enter number for using algorithm you want to apply:- "))
-        
-        if a!=5:
+         
+        if a!=4:
             l=[int(x) for x in input("Input Numbers seperated by comma: ").split(",")]      
             no= int(input("Enter number you want to search : "))
             
